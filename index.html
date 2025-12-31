@@ -32,10 +32,19 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -477,12 +486,205 @@
         </div>
     </section>
 
+    <!-- Projects Showcase Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="aws">AWS</button>
+                <button class="filter-btn" data-filter="azure">Azure</button>
+                <button class="filter-btn" data-filter="terraform">Terraform</button>
+                <button class="filter-btn" data-filter="cicd">CI/CD</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="aws terraform" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AWS Landing Zone with Control Tower</h3>
+                        <p>Implemented multi-account AWS environment with best practices, automated account vending, and centralized governance using AWS Control Tower and Terraform.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-cloud"></i> 50+ Accounts</div>
+                            <div class="stat"><i class="fas fa-shield-alt"></i> SOC 2 Compliant</div>
+                            <div class="stat"><i class="fas fa-dollar-sign"></i> 30% Cost Saved</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">AWS</span>
+                            <span class="tech-badge">Terraform</span>
+                            <span class="tech-badge">Control Tower</span>
+                            <span class="tech-badge">Organizations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="cicd terraform" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Case Study</a>
+                                <a href="#" class="project-link" target="_blank"><i class="fab fa-gitlab"></i> Pipeline</a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Multi-Stage CI/CD Pipeline</h3>
+                        <p>Built comprehensive GitLab CI/CD pipeline with automated testing, security scanning, Docker image building, and Kubernetes deployment across multiple environments.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-clock"></i> 70% Faster</div>
+                            <div class="stat"><i class="fas fa-bug"></i> 95% Bug Reduction</div>
+                            <div class="stat"><i class="fas fa-rocket"></i> 200+ Deploys/Month</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">GitLab CI</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">Helm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="aws" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Architecture</a>
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-book"></i> Docs</a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CloudEndure Disaster Recovery</h3>
+                        <p>Implemented comprehensive DR solution for physical and virtual servers to AWS, ensuring business continuity with RPO < 1 minute and RTO < 1 hour.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-server"></i> 100+ Servers</div>
+                            <div class="stat"><i class="fas fa-heartbeat"></i> 99.99% Uptime</div>
+                            <div class="stat"><i class="fas fa-clock"></i> <1hr RTO</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">AWS CloudEndure</span>
+                            <span class="tech-badge">EC2</span>
+                            <span class="tech-badge">S3</span>
+                            <span class="tech-badge">VPC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="azure cicd" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Details</a>
+                                <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Azure SSO Integration</h3>
+                        <p>Implemented AWS Single Sign-On with multiple identity providers including Azure AD, Okta, and Microsoft AD for seamless authentication across 50+ AWS accounts.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-users"></i> 500+ Users</div>
+                            <div class="stat"><i class="fas fa-lock"></i> MFA Enabled</div>
+                            <div class="stat"><i class="fas fa-chart-line"></i> 80% Time Saved</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">AWS SSO</span>
+                            <span class="tech-badge">Azure AD</span>
+                            <span class="tech-badge">Okta</span>
+                            <span class="tech-badge">SAML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="terraform aws" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Modules</a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Terraform Module Library</h3>
+                        <p>Created reusable Terraform modules for VPC, ECS, RDS, and S3 with built-in security best practices, reducing infrastructure deployment time by 60%.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-cubes"></i> 20+ Modules</div>
+                            <div class="stat"><i class="fas fa-code"></i> 10K+ Lines</div>
+                            <div class="stat"><i class="fas fa-download"></i> 500+ Uses</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">Terraform</span>
+                            <span class="tech-badge">AWS</span>
+                            <span class="tech-badge">IaC</span>
+                            <span class="tech-badge">Modules</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="aws" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Architecture</a>
+                                <a href="#" class="project-link" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hybrid Cloud Networking</h3>
+                        <p>Designed and implemented VPN and Direct Connect solutions connecting on-premises infrastructure to AWS with redundancy and high availability.</p>
+                        <div class="project-stats">
+                            <div class="stat"><i class="fas fa-tachometer-alt"></i> 10Gbps</div>
+                            <div class="stat"><i class="fas fa-globe"></i> 5 Regions</div>
+                            <div class="stat"><i class="fas fa-signal"></i> 99.95% Uptime</div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">AWS VPN</span>
+                            <span class="tech-badge">Direct Connect</span>
+                            <span class="tech-badge">Transit Gateway</span>
+                            <span class="tech-badge">Route 53</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Certifications & Awards -->
     <section id="certifications" class="certifications section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Achievements</span>
-                <h2 class="section-title">Certifications & Awards</h2>
+                <span class="section-tag">Professional Credentials</span>
+                <h2 class="section-title">Certifications</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="certifications-grid">
@@ -495,6 +697,11 @@
                     <div class="cert-icon-footer">
                         <i class="fas fa-certificate"></i>
                     </div>
+                    <div class="cert-overlay">
+                        <a href="https://www.credly.com/badges/placeholder-cert-1" target="_blank" class="btn-view-cert">
+                            <i class="fas fa-external-link-alt"></i> Open Certificate
+                        </a>
+                    </div>
                 </div>
                 <div class="cert-card" data-aos="zoom-in">
                     <div class="cert-badge">
@@ -504,6 +711,11 @@
                     <p class="cert-issuer">Amazon Web Services</p>
                     <div class="cert-icon-footer">
                         <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-overlay">
+                        <a href="https://www.credly.com/badges/placeholder-cert-2" target="_blank" class="btn-view-cert">
+                            <i class="fas fa-external-link-alt"></i> Open Certificate
+                        </a>
                     </div>
                 </div>
                 <div class="cert-card" data-aos="zoom-in">
@@ -515,6 +727,11 @@
                     <div class="cert-icon-footer">
                         <i class="fas fa-certificate"></i>
                     </div>
+                    <div class="cert-overlay">
+                        <a href="https://learn.microsoft.com/certifications/placeholder-cert-3" target="_blank" class="btn-view-cert">
+                            <i class="fas fa-external-link-alt"></i> Open Certificate
+                        </a>
+                    </div>
                 </div>
                 <div class="cert-card" data-aos="zoom-in">
                     <div class="cert-badge">
@@ -525,47 +742,10 @@
                     <div class="cert-icon-footer">
                         <i class="fas fa-certificate"></i>
                     </div>
-                </div>
-            </div>
-
-            <div class="awards-section">
-                <h3 class="awards-title">Honors & Awards</h3>
-                <div class="awards-grid">
-                    <div class="award-item" data-aos="fade-up">
-                        <div class="award-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="award-content">
-                            <h4>🥉 Third Prize - Hackathon</h4>
-                            <p>Innovative cloud-based solution</p>
-                        </div>
-                    </div>
-                    <div class="award-item" data-aos="fade-up">
-                        <div class="award-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="award-content">
-                            <h4>🥈 Second Prize - Hackathon</h4>
-                            <p>DevOps automation project</p>
-                        </div>
-                    </div>
-                    <div class="award-item" data-aos="fade-up">
-                        <div class="award-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="award-content">
-                            <h4>🥈 2nd Prize - Hackathon</h4>
-                            <p>Cloud infrastructure design</p>
-                        </div>
-                    </div>
-                    <div class="award-item" data-aos="fade-up">
-                        <div class="award-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="award-content">
-                            <h4>⭐⭐⭐⭐⭐ 5-Star Gold Level</h4>
-                            <p>HackerRank Problem Solving</p>
-                        </div>
+                    <div class="cert-overlay">
+                        <a href="https://www.credly.com/badges/placeholder-cert-4" target="_blank" class="btn-view-cert">
+                            <i class="fas fa-external-link-alt"></i> Open Certificate
+                        </a>
                     </div>
                 </div>
             </div>
@@ -623,6 +803,106 @@
         </div>
     </section>
 
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What Others Say</span>
+                <h2 class="section-title">Testimonials</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card active" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Azeemushan is an exceptional cloud engineer who delivered our AWS migration project ahead of schedule. 
+                            His expertise in Terraform and CI/CD automation saved us thousands in operational costs. Highly recommended!"
+                        </p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>CTO, Tech Solutions Inc.</p>
+                            <img src="https://via.placeholder.com/100x30/667eea/ffffff?text=Tech+Solutions" alt="Company" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Working with Azeemushan was a game-changer for our DevOps practices. He implemented a robust CI/CD pipeline 
+                            that reduced our deployment time by 70% and virtually eliminated production issues."
+                        </p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>VP Engineering, CloudFirst Ltd.</p>
+                            <img src="https://via.placeholder.com/100x30/764ba2/ffffff?text=CloudFirst" alt="Company" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Azeemushan's deep knowledge of AWS and Azure helped us design a highly available, cost-effective infrastructure. 
+                            His attention to security best practices gave us peace of mind. A true cloud expert!"
+                        </p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Head of Infrastructure, DataCorp</p>
+                            <img src="https://via.placeholder.com/100x30/f093fb/ffffff?text=DataCorp" alt="Company" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev-btn" id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots" id="testimonialDots"></div>
+                <button class="testimonial-btn next-btn" id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
@@ -632,6 +912,30 @@
                 <div class="title-underline"></div>
             </div>
             <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                            <span class="btn-loading hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                        </button>
+                    </form>
+                </div>
                 <div class="contact-info">
                     <p class="contact-description">
                         I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
@@ -690,18 +994,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="contact-visual">
-                    <div class="contact-illustration">
-                        <div class="illustration-circle circle-1"></div>
-                        <div class="illustration-circle circle-2"></div>
-                        <div class="illustration-circle circle-3"></div>
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- GitHub Stats Section -->
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -716,6 +1013,32 @@
     <button class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search portfolio... (Type to search)">
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-empty">
+                    <i class="fas fa-search"></i>
+                    <p>Start typing to search...</p>
+                </div>
+            </div>
+            <div class="search-footer">
+                <div class="search-shortcuts">
+                    <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+                    <span><kbd>Enter</kbd> Select</span>
+                    <span><kbd>Esc</kbd> Close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
 
     <script src="script.js"></script>
 </body>
